@@ -24,14 +24,37 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     console.log("Request received");
 
     console.log(_request.url);
+    
+    _response.setHeader("Access-Control-Allow-Origin", "*");
+    _response.setHeader("content-type", "text/html; charset=utf-8");
+    
     let query: AssocStringString = Url.parse(_request.url, true).query;
     console.log(query);
+    
     let key: string;
     for (key in query)
         console.log(key + ":" + query[key]);
+    if (key == "taste") {
+        _response.write(key + "<br>");
+    }
 
-    _response.setHeader("Access-Control-Allow-Origin", "*");
-    _response.setHeader("content-type", "text/html; charset=utf-8");
     _response.write("Ich höre Stimmen!");
     _response.end();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
