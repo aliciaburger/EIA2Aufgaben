@@ -41,7 +41,7 @@ _response.write("Hallo");
         _response.write(key + "<br>");
     }
 
-    
+    _response.write("Ich höre Stimmen!");
     _response.end();
 }
 

@@ -27,6 +27,7 @@ function handleRequest(_request, _response) {
     if (key == "eissorte") {
         _response.write(key + "<br>");
     }
+    _response.write("Ich höre Stimmen!");
     _response.end();
 }
 //# sourceMappingURL=NodeTest.js.map
