@@ -24,7 +24,7 @@ function handleRequest(_request, _response) {
     for (key in query)
         console.log(key + ":" + query[key]);
     //    _response.write("du, ");
-    _response.write("ich höre Stimmen!");
+    //    _response.write("ich höre Stimmen!");
     _response.end();
 }
 //# sourceMappingURL=NodeTest.js.map
