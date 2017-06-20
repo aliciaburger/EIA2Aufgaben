@@ -14,6 +14,7 @@ function handleListen() {
 }
 function handleRequest(_request, _response) {
     console.log("Request received");
+    _response.write("Hallo");
     console.log(_request.url);
     _response.setHeader("Access-Control-Allow-Origin", "*");
     _response.setHeader("content-type", "text/html; charset=utf-8");
@@ -22,10 +23,10 @@ function handleRequest(_request, _response) {
     let key;
     for (key in query)
         console.log(key + ":" + query[key]);
-    if (key == "taste") {
+    _response.write("Hallo");
+    if (key == "eissorte") {
         _response.write(key + "<br>");
     }
-    _response.write("Ich höre Stimmen!");
     _response.end();
 }
 //# sourceMappingURL=NodeTest.js.map

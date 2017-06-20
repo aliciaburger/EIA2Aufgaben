@@ -22,7 +22,7 @@ function handleListen(): void {
 
 function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
     console.log("Request received");
-
+_response.write("Hallo");
     console.log(_request.url);
     
     _response.setHeader("Access-Control-Allow-Origin", "*");
@@ -31,14 +31,17 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     let query: AssocStringString = Url.parse(_request.url, true).query;
     console.log(query);
     
+    
     let key: string;
+    
     for (key in query)
         console.log(key + ":" + query[key]);
-    if (key == "taste") {
+    _response.write("Hallo");
+    if (key == "eissorte") {
         _response.write(key + "<br>");
     }
 
-    _response.write("Ich höre Stimmen!");
+    
     _response.end();
 }
 
