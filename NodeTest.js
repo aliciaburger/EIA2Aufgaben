@@ -21,9 +21,10 @@ function handleRequest(_request, _response) {
     let query = Url.parse(_request.url, true).query;
     console.log(query);
     let key;
-    for (key in query)
+    for (key in query) {
         console.log(key + ":" + query[key]);
-    //    _response.write("du, ");
+    }
+    _response.write("Folgende Eissorten sind als Bestellung eingegangen: <br>");
     _response.write("ich höre Stimmen!");
     _response.end();
 }

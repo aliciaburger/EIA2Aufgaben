@@ -34,11 +34,11 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     
     let key: string;
     
-    for (key in query)
+    for (key in query){
         console.log(key + ":" + query[key]);
 //    _response.write("du, ");
-    
-
+    }
+    _response.write("Folgende Eissorten sind als Bestellung eingegangen: <br>");
     _response.write("ich höre Stimmen!");
     _response.end();
 }
