@@ -8,15 +8,14 @@ interface AssocStringString {
 }
 
 let port: number = process.env.PORT;
-//if (port == undefined)
-//    port = 8100;
+if (port == undefined)
+    port = 8100;
 
 let server: Http.Server = Http.createServer();
-//server.addListener("listen", onListen);
-//server.addListener("request", onRequest);
+
 server.addListener("listening", handleListen);
 server.addListener("request", handleRequest);
-server.listen(process.env.port||8100);
+//server.listen(process.env.port||8100);
 server.listen(port);
 
 function handleListen(): void {
