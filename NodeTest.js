@@ -15,7 +15,7 @@ function handleListen() {
 }
 function handleRequest(_request, _response) {
     console.log("Request received");
-    //    _response.write("huhu");
+    _response.write("huhu");
     console.log(_request.url);
     let query = Url.parse(_request.url, true).query;
     console.log(query);
