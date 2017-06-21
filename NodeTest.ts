@@ -25,8 +25,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     _response.write("huhu");
     console.log(_request.url);
     
-    _response.setHeader("Access-Control-Allow-Origin", "*");
-    _response.setHeader("content-type", "text/html; charset=utf-8");
+    
     
     let query: AssocStringString = Url.parse(_request.url, true).query;
     console.log(query);
@@ -38,7 +37,12 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
         console.log(key + ":" + query[key]);
 //    _response.write("du, ");
     }
+    _response.setHeader("Access-Control-Allow-Origin", "*");
+    _response.setHeader("content-type", "text/html; charset=utf-8");
+    
 
+    _response.setHeader("Access-Control-Allow-Origin", "*");
+    _response.setHeader("content-type", "text/html; charset=utf-8");
     _response.write("ich höre Stimmen!");
     _response.end();
 }
