@@ -24,7 +24,7 @@ function handleListen(): void {
 
 function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
     console.log("Request received");
-    _response.write("huhu");
+//    _response.write("huhu");
     console.log(_request.url);
     
     
@@ -35,7 +35,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     
     let key: string;
     
-    for (key in query){
+    for (key in query) {
         console.log(key + ":" + query[key]);
 //    _response.write("du, ");
     }
