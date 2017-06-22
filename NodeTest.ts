@@ -41,7 +41,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     for (key in query) {
         console.log(key + ":" + query[key]);
         if (key == "Vanille" || key == "Erdbeere"|| key == "Schokolade" || key == "Walnuss") {
-            _response.write(key + query + "<br>");
+            _response.write(key + query[key] + "<br>");
         }
     
     }
