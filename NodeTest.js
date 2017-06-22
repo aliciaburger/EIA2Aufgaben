@@ -24,8 +24,8 @@ function handleRequest(_request, _response) {
     let key;
     for (key in query) {
         console.log(key + ":" + query[key]);
-        if (key == "eissorte") {
-            _response.write(key + "<br>");
+        if (key == "Vanille" || key == "Erdbeere" || key == "Schokolade" || key == "Walnuss") {
+            _response.write(key + query + "<br>");
         }
     }
     //    _response.write("ich höre Stimmen!");
