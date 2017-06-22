@@ -24,8 +24,9 @@ function handleRequest(_request, _response) {
     let key;
     for (key in query) {
         console.log(key + ":" + query[key]);
-        if (key == "eissorte")
+        if (key == "eissorte") {
             _response.write(key + "<br>");
+        }
     }
     //    _response.write("ich höre Stimmen!");
     //    _response.write("ich höre Stimmen!");

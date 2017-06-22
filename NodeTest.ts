@@ -40,8 +40,10 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     
     for (key in query) {
         console.log(key + ":" + query[key]);
-        if(key == "eissorte")
-    _response.write(key + "<br>");
+        if (key == "eissorte") {
+            _response.write(key + "<br>");
+        }
+    
     }
     
     
