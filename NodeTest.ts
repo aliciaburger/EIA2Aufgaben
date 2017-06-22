@@ -37,7 +37,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     
     for (key in query) {
         console.log(key + ":" + query[key]);
-//    _response.write("du, ");
+    _response.write("du, ");
     }
     _response.setHeader("Access-Control-Allow-Origin", "*");
     _response.setHeader("content-type", "text/html; charset=utf-8");
