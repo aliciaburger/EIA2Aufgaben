@@ -40,14 +40,15 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     
     for (key in query) {
         console.log(key + ":" + query[key]);
-    _response.write(key + ":" + query[key]);
+        if(key == "eissorte")
+    _response.write(key + "<br>");
     }
     
     
 
     
-    _response.write("ich höre Stimmen!");
-    _response.write("ich höre Stimmen!");
+//    _response.write("ich höre Stimmen!");
+//    _response.write("ich höre Stimmen!");
     _response.end();
 }
 
