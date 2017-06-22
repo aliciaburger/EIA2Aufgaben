@@ -25,9 +25,10 @@ function handleRequest(_request, _response) {
     for (key in query) {
         console.log(key + ":" + query[key]);
         if (key == "Vanille" || key == "Erdbeere" || key == "Schokolade" || key == "Walnuss") {
-            _response.write(key + query[key] + "<br>");
+            _response.write(key + " Test" + query[key] + "<br>");
         }
     }
+    //Baum
     //    _response.write("ich höre Stimmen!");
     //    _response.write("ich höre Stimmen!");
     _response.end();
