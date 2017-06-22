@@ -34,6 +34,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     
     
     let key: string;
+
     
     for (key in query) {
         console.log(key + ":" + query[key]);
