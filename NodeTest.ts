@@ -2,10 +2,10 @@ console.log("Server starting");
 
 import Http = require("http");
 import Url = require("url");
-
+ 
 interface AssocStringString {
     [key: string]: string;
-}
+} 
 
 let port: number = process.env.PORT;
 if (port == undefined)
@@ -38,16 +38,18 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     let key: string;
 
     
+    
     for (key in query) {
         console.log(key + ":" + query[key]);
-        if (key == "Vanille" || key == "Erdbeere"|| key == "Schokolade" || key == "Walnuss") {
-            _response.write(key + query[key] + "<br>");
+        if (key == "Vanille" || key == "Erdbeere" || key == "Schokolade" || key == "Walnuss") {
+            _response.write(key +" = " + query[key] + "<br>");
         }
+        
     
     }
     
     
-
+//Baum
     
 //    _response.write("ich höre Stimmen!");
 //    _response.write("ich höre Stimmen!");
