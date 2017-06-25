@@ -24,7 +24,7 @@ function handleListen(): void {
 
 function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
     console.log("Request received");
-//    _response.write("huhu");
+    _response.write("huhu");
     console.log(_request.url);
     
     _response.setHeader("Access-Control-Allow-Origin", "*");
@@ -57,7 +57,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
 //Baum
     
 //    _response.write("ich höre Stimmen!");
-    _response.write("ich höre Stimmen!");
+//    _response.write("ich höre Stimmen!");
     _response.end();
 }
 
