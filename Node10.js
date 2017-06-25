@@ -26,7 +26,9 @@ function handleRequest(_request, _response) {
     for (key in query) {
         console.log(key + ":" + query[key]);
         if (key == "Vanille" || key == "Erdbeere" || key == "Schokolade" || key == "Walnuss") {
-            _response.write(key + "\n" + query[key] + "<br>");
+            if (parseInt(query[key]) != 0) {
+                _response.write(key + "\n" + query[key] + "<br>");
+            }
         }
     }
     //Baum
