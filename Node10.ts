@@ -1,5 +1,5 @@
 console.log("Server starting");
-//TEST Test 2
+//TEST
 import Http = require("http");
 import Url = require("url");
  
@@ -24,7 +24,7 @@ function handleListen(): void {
 
 function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
     console.log("Request received");
-    _response.write("huhu");
+//    _response.write("huhu");
     console.log(_request.url);
     
     _response.setHeader("Access-Control-Allow-Origin", "*");
@@ -39,14 +39,10 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
 
     
     
-    
     for (key in query) {
         console.log(key + ":" + query[key]);
         if (key == "Vanille" || key == "Erdbeere" || key == "Schokolade" || key == "Walnuss") {
-           if(parseInt(query[key]) != 0) {
-               _response.write(key + "\n" + query[key] + "<br>");
-           }
-            
+            _response.write(key + "\n" + query[key] + "<br>");
             //Test
         }
         
