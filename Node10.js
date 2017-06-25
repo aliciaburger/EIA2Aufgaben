@@ -1,5 +1,6 @@
 "use strict";
 console.log("Server starting");
+//TEST Test 2
 const Http = require("http");
 const Url = require("url");
 let port = process.env.PORT;
@@ -25,7 +26,7 @@ function handleRequest(_request, _response) {
     for (key in query) {
         console.log(key + ":" + query[key]);
         if (key == "Vanille" || key == "Erdbeere" || key == "Schokolade" || key == "Walnuss") {
-            _response.write(key + " Test" + query[key] + "<br>");
+            _response.write(key + "\n" + query[key] + "<br>");
         }
     }
     //Baum
@@ -33,4 +34,4 @@ function handleRequest(_request, _response) {
     //    _response.write("ich höre Stimmen!");
     _response.end();
 }
-//# sourceMappingURL=NodeTest.js.map
+//# sourceMappingURL=Node10.js.map

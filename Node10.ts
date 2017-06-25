@@ -1,5 +1,5 @@
 console.log("Server starting");
-
+//TEST Test 2
 import Http = require("http");
 import Url = require("url");
  
@@ -42,7 +42,11 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     for (key in query) {
         console.log(key + ":" + query[key]);
         if (key == "Vanille" || key == "Erdbeere" || key == "Schokolade" || key == "Walnuss") {
-            _response.write(key + " Test" + query[key] + "<br>");
+           if(parseInt(query[key]) != 0) {
+               _response.write(key + "\n" + query[key] + "<br>");
+           }
+            
+            //Test
         }
         
     
@@ -55,6 +59,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
 //    _response.write("ich höre Stimmen!");
     _response.end();
 }
+
 
 
 
