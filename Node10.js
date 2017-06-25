@@ -33,7 +33,7 @@ function handleRequest(_request, _response) {
     }
     //Baum
     //    _response.write("ich höre Stimmen!");
-    //    _response.write("ich höre Stimmen!");
+    _response.write("ich höre Stimmen!");
     _response.end();
 }
 //# sourceMappingURL=Node10.js.map

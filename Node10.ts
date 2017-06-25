@@ -57,7 +57,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
 //Baum
     
 //    _response.write("ich höre Stimmen!");
-//    _response.write("ich höre Stimmen!");
+    _response.write("ich höre Stimmen!");
     _response.end();
 }
 
