@@ -54,17 +54,17 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
             //Test
 
         }
-        _response.write("Ihre angegebene Lieferadresse: " + query["Strasse"] + "<br>" + query["Hausnummer"] + "<br>" + query["Stadt"] + "<br>" + query["Postleizahl"] + "<br>");
-        _response.write("Die Rechnung mit Bestellübersicht, wurde ihnen bereits an " + query["EMail"] + "gesendet.");
+        
 
       
 
         //    _response.write("ich höre Stimmen!");
         //    _response.write("ich höre Stimmen!");
-        _response.end();
+        
     }
-
-
+_response.write("Ihre angegebene Lieferadresse: " + query["Strasse"] + "<br>" + query["Hausnummer"] + "<br>" + query["Stadt"] + "<br>" + query["Postleizahl"] + "<br>");
+_response.write("Die Rechnung mit Bestellübersicht, wurde ihnen bereits an " + query["EMail"] + "gesendet.");
+_response.end();
 }
 
 
