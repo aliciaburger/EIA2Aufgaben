@@ -35,7 +35,7 @@ function handleRequest(_request, _response) {
     }
     // Kommentar! XXX
     _response.write("Ihre angegebene Lieferadresse: " + "<br>" + query["Strasse"] + "<br>" + query["Hausnummer"] + "<br>" + query["Stadt"] + "<br>" + query["Postleizahl"] + "<br>");
-    _response.write("Die Rechnung mit Bestellübersicht, wurde ihnen bereits an " + query["EMail"] + "gesendet.");
+    _response.write("Die Rechnung mit Bestellübersicht, wurde ihnen bereits an " + query["EMail"] + " gesendet.");
     _response.end();
 }
 //# sourceMappingURL=Node10.js.map
