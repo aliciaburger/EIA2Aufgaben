@@ -5,7 +5,7 @@
 	"author" : "Jirka Dell'Oro-Friedl'",
 	"main" : "Node10.js",
 	"scripts" : {
-		"start" : "node NodeTest.js"
+		"start" : "node Node10.js"
 	},
 	"engines" : {
 		"node" : "6.10.3"
