@@ -23,7 +23,7 @@ function handleRequest(_request, _response) {
     let query = Url.parse(_request.url, true).query;
     console.log(query);
     let key;
-    _response.write("Hallo Frau/ Herr " + query["Nachname"]);
+    _response.write("Hallo Frau/ Herr " + query["Nachname"] + "<br>");
     for (key in query) {
         console.log(key + ":" + query[key]);
         if (key == "Vanille" || key == "Erdbeere" || key == "Schokolade" || key == "Walnuss") {

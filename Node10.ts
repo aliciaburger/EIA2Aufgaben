@@ -39,7 +39,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     let key: string;
 
 
-    _response.write("Hallo Frau/ Herr " + query["Nachname"]);
+    _response.write("Hallo Frau/ Herr " + query["Nachname"] + "<br>");
 
     for (key in query) {
 
